@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <style>
+        body{
+    background-color: rgb(4, 6, 9);
+}
+
+.main{
+    margin: 200px 550px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5.5px;
+    width: 350px;
+    height: 250px;
+}
+.main h1{
+    text-align: center;
+}
+.main label{
+    padding: 15px;
+}
+.main input{
+    margin: 5px;
+}
+.main h3{
+    margin-left: 18px;
+}
+.main button{
+    margin-top: 15px;
+    margin-left: 140px;
+}
+.main p{
+    margin-top: -38px;
+    margin-left: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 150px;
+    height: 18px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Celcius to Fahrenheit</h1>
+        <label for="temp"><b>Degree:</b></label>
+        <input type="number" id="temp">
+        <br>
+        <label for="temp_diff"><b>Change To:</b></label>
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel">Celcius</option>
+            <option value="fah">Fahrenheit</option>
+        </select>
+        <br>
+        <h3>Result:</h3>
+        <p id="res"></p>
+        <button onclick="change()">Change</button>
+    </div>
+    <script>
+        temp=document.getElementById("temp")
+        type=document.getElementById("temp_diff")
+        function change()
+        {
+            if(type.value=="cel"){
+                let celcius=((temp.value)*1.8)+32
+                document.getElementById("res").innerHTML=celcius
+            }
+            if(type.value=="fah"){
+                let fahrenheit=((temp.value)*1.8)+32
+                document.getElementById("res").innerHTML=fahrenheit
+            }
+        }
+    </script>
+</body>
+</html>
